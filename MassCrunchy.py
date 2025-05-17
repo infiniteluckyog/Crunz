@@ -5,11 +5,11 @@ import pytz
 import time
 import os
 
-BOT_TOKEN = "7468947655:AAH0HWxicRb2JhAX716WlGO9pulYpei80po"
+BOT_TOKEN = "7468947655:AAEWQQyCZGLrC2O4fbsyTKEgYidWuZ2hOLk"
 ADMIN_ID = 6652287427
 APPROVED_FILE = "approved_users.txt"
 AUTH_HEADER = "Basic bm9haWhkZXZtXzZpeWcwYThsMHE6"
-PROXY = "evo-pro.porterproxies.com:61236:PP_1D1E5YMPFG-country-IN:5vl30ay0"
+PROXY = "http://PP_1D1E5YMPFG-country-IN:5vl30ay0@evo-pro.porterproxies.com:61236"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/123.0 Safari/537.36"
 
 bot = telebot.TeleBot(BOT_TOKEN)
