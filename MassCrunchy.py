@@ -5,7 +5,7 @@ import pytz
 import time
 import os
 
-BOT_TOKEN = "7468947655:AAEWQQyCZGLrC2O4fbsyTKEgYidWuZ2hOLk"
+BOT_TOKEN = "7468947655:AAFr8MFQ-ddK_-KKWHpOVq37CXxpr2hi3JY"
 ADMIN_ID = 6652287427
 APPROVED_FILE = "approved_users.txt"
 AUTH_HEADER = "Basic bm9haWhkZXZtXzZpeWcwYThsMHE6"
