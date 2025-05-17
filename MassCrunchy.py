@@ -29,7 +29,7 @@ approved_users = load_approved()
 
 async def check_crunchyroll(email, password):
     async with httpx.AsyncClient(
-        proxy=PROXY,
+        proxies=PROXY,
         timeout=30,
         headers={"User-Agent": UA}
     ) as client:
